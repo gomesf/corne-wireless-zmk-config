@@ -50,7 +50,8 @@
             bindings =
                 <&macro_press>,
                 <&kp LEFT_ALT &kp LEFT_WIN &kp C>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LEFT_ALT &kp LEFT_META &kp C>;
         };
         mission_control: mission_control {
             compatible = "zmk,behavior-macro";
@@ -59,7 +60,8 @@
             bindings =
                 <&macro_press>,
                 <&kp LCTRL &kp UP_ARROW>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LEFT_CONTROL &kp UP_ARROW>;
         };
         cicle_all_windows: cicle_all_windows {
             compatible = "zmk,behavior-macro";
@@ -68,7 +70,8 @@
             bindings =
                 <&macro_press>,
                 <&kp LEFT_CONTROL &kp DOWN_ARROW>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LEFT_CONTROL &kp DOWN_ARROW>;
         };
     };
 
