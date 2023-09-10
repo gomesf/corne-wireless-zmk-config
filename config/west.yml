@@ -1,11 +1,13 @@
+# Add mouse support (beta)
+#https://gist.github.com/krissen/dd27082e7ab0575619c7a31f4d2ec7ae
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+      url-base: https://github.com/ftc/
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: mouse-ftc
       import: app/west.yml
   self:
     path: config
