@@ -73,6 +73,18 @@
                 <&macro_release>,
                 <&kp LEFT_CONTROL &kp DOWN_ARROW>;
         };
+        custom_alt_tab: custom_alt_tab {
+            compatible = "zmk,behavior-macro";
+            label = "CUSTOM_ALT_TAB";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL &kp DOWN_ARROW>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL &kp DOWN_ARROW>,
+                <&macro_tap>,
+                <&kp TAB &kp DOWN &kp ENTER>;
+        };
     };
 
     keymap {
@@ -128,10 +140,10 @@
 
         both_layer {
             bindings = <
-&trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &trans  &cicle_all_windows    &mouse        &trans        &trans        &trans        &trans  &trans
-&trans  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &trans  &trans  &mission_control      &trans        &trans        &trans        &trans        &trans  &trans
-&trans  &trans                &trans                &trans  &trans  &trans                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans  &trans
-                                                    &trans  &trans  &trans                &trans        &trans        &bt BT_CLR
+&trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &trans  &custom_alt_tab       &mouse  &trans  &trans      &trans  &bt BT_SEL 0  &trans
+&trans  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &trans  &trans  &cicle_all_windows    &trans  &trans  &trans      &trans  &bt BT_SEL 1  &trans
+&trans  &trans                &trans                &trans  &trans  &mission_control      &trans  &trans  &trans      &trans  &bt BT_SEL 2  &trans
+                                                    &trans  &trans  &trans                &trans  &trans  &bt BT_CLR
             >;
         };
     };
