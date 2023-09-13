@@ -169,19 +169,19 @@
         raise_layer {
             label = "Raise";
             bindings = <
-&trans  &trans  &trans  	&kp UP_ARROW    &trans      &trans       &trans   &mkp LCLK  		&mmv MOVE_UP  	&mkp RCLK  		&mwh SCROLL_UP  &trans
-&trans  &trans  &kp LEFT  	&kp DOWN_ARROW  &kp RIGHT   &trans  	 &trans   &mmv MOVE_LEFT 	&mmv MOVE_DOWN  &mmv MOVE_RIGHT &mwh SCROLL_DOWN  &trans
-&trans  &trans  &trans  	&trans    		&trans      &trans       &trans   &trans  &trans  	&trans  &trans  &trans
-                        	&trans    		&trans      &kp SPACE    &kp RET  &trans  &trans
+&trans  &trans  &trans    &kp UP_ARROW    &trans     &trans       &trans   &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mwh SCROLL_UP    &trans
+&trans  &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &trans       &trans   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mwh SCROLL_DOWN  &trans
+&trans  &trans  &trans    &trans          &trans     &trans       &trans   &trans          &trans          &trans           &trans            &trans
+                          &trans          &trans     &kp SPACE    &kp RET  &trans          &trans
             >;
         };
 
         both_layer {
             bindings = <
-&trans  &trans      &trans  &trans  &bt BT_SEL 0  &trans    &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &trans  &trans  &trans  &trans
-&trans  &trans      &trans  &trans  &bt BT_SEL 1  &trans    &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &trans  &trans  &trans
-&trans  &bt BT_CLR  &trans  &trans  &bt BT_SEL 2  &trans    &trans                &trans                &trans  &trans  &trans  &trans
-                            &trans  &trans        &trans    &trans                &trans                &trans
+&trans  &trans      &trans  &trans  &bt BT_SEL 0  &trans    &trans  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &trans  &trans  &trans
+&trans  &trans      &trans  &trans  &bt BT_SEL 1  &trans    &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &trans  &trans
+&trans  &bt BT_CLR  &trans  &trans  &bt BT_SEL 2  &trans    &trans  &trans                &trans                &trans  &trans  &trans
+                            &trans  &trans        &trans    &trans  &trans                &trans
             >;
         };
     };
