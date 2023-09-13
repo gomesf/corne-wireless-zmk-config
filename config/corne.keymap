@@ -5,6 +5,19 @@
  * MOUSE SUPPORT: https://gist.github.com/krissen/dd27082e7ab0575619c7a31f4d2ec7ae
  * KEYMAP EDITOR: https://github.com/nickcoutsos/keymap-editor
  * MOUSE WHEEL REFERENCE: https://git.kemonine.info/kemonine/keyboard/commit/45d8c3530a40c2923cae3f1c22f27f6ed89b84cc
+
+ * MOUSE CODES
+ * &mkp RCLK   
+ * &mkp LCLK
+ * 
+ * &mwh SCROLL_UP 		
+ * &mwh SCROLL_DOWN 		
+ * 
+ * &mmv MOVE_UP  
+ * &mmv MOVE_LEFT  
+ * &mmv MOVE_DOWN  
+ * &mmv MOVE_RIGHT
+
  */
 
 #include <behaviors.dtsi>
@@ -25,10 +38,10 @@
 #define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
 
 &mmv {
-    time-to-max-speed-ms = <600>;/* <--- How long time until max speed is reached (default: 500) */
+    time-to-max-speed-ms = <500>;/* <--- How long time until max speed is reached (default: 500) */
 };
 
-#define U_MOUSE_SCROLL_MAX 100                    /* <--- New max speed setting (default: 10) */
+#define U_MOUSE_SCROLL_MAX 50                    /* <--- New max speed setting (default: 10) */
 
 #undef SCROLL_UP
 #undef SCROLL_DOWN
@@ -41,7 +54,7 @@
 #define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
 
 &mwh {
-    time-to-max-speed-ms = <600>;/* <--- How long time until max speed is reached */
+    time-to-max-speed-ms = <500>;/* <--- How long time until max speed is reached */
 };
 
 / {
@@ -156,10 +169,10 @@
         raise_layer {
             label = "Raise";
             bindings = <
-&trans  &trans  &trans  &trans    &kp UP_ARROW    &trans       &trans   &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT    &trans   &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans          &trans       &trans   &trans  &trans  &trans  &trans  &trans
-                        &trans    &trans          &kp SPACE    &kp RET  &trans  &trans
+&trans  &trans  &trans  	&kp UP_ARROW    &trans      &trans       &trans   &mkp LCLK  		&mmv MOVE_UP  	&mkp RCLK  		&mwh SCROLL_UP  &trans
+&trans  &trans  &kp LEFT  	&kp DOWN_ARROW  &kp RIGHT   &trans  	 &trans   &mmv MOVE_LEFT 	&mmv MOVE_DOWN  &mmv MOVE_RIGHT &mwh SCROLL_DOWN  &trans
+&trans  &trans  &trans  	&trans    		&trans      &trans       &trans   &trans  &trans  	&trans  &trans  &trans
+                        	&trans    		&trans      &kp SPACE    &kp RET  &trans  &trans
             >;
         };
 
