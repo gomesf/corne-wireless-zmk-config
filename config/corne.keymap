@@ -149,9 +149,9 @@
         default_layer {
             label = "Base";
             bindings = <
-&trans  &kp Q              &kp W                &kp E            &kp R             &trans       &trans   &kp U            &kp I            &kp O                &kp P                 &trans
-&trans  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_META F  &trans       &trans   &hmr LEFT_GUI J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &trans
-&trans  &kp Z              &kp X                &kp C            &kp V             &trans       &trans   &kp M            &kp COMMA        &kp DOT              &kp FSLH              &trans
+&trans  &kp Q              &kp W                &kp E            &kp R             &kp T        &kp Y    &kp U            &kp I            &kp O                &kp P                 &trans
+&trans  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_META F  &kp G        &kp H    &hmr LEFT_GUI J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_SHIFT SEMI  &trans
+&trans  &kp Z              &kp X                &kp C            &kp V             &kp B        &kp N    &kp M            &kp COMMA        &kp DOT              &kp FSLH              &trans
                                                 &trans           &mo 1             &kp SPACE    &kp RET  &mo 2            &trans
             >;
         };
@@ -159,10 +159,10 @@
         lower_layer {
             label = "Lower";
             bindings = <
-&trans  &kp GRAVE  &kp SQT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans       &trans   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &trans
-&trans  &trans     &trans   &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans       &trans   &kp N4        &kp N5        &kp N6        &kp MINUS     &trans
-&trans  &trans     &trans   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans       &trans   &kp N7        &kp N8        &kp N9        &kp EQUAL     &trans
-                            &trans                &trans                 &kp SPACE    &kp RET  &trans        &trans
+&trans  &kp GRAVE         &kp SQT            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans       &trans   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &trans
+&trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans       &trans   &kp N4        &kp N5        &kp N6        &kp MINUS     &trans
+&trans  &trans            &trans             &trans                &trans                 &trans       &trans   &kp N7        &kp N8        &kp N9        &kp EQUAL     &trans
+                                             &trans                &trans                 &kp SPACE    &kp RET  &trans        &trans
             >;
         };
 
