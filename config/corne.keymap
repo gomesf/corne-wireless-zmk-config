@@ -21,9 +21,9 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define U_MOUSE_MOVE_MAX 1100                     /* <--- New max speed setting (default: 600) */
 
@@ -111,42 +111,37 @@
         hold_tap: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <0 12 24 25 13 1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 36 37 38 39 40 41>;
             tapping-term-ms = <200>;
         };
+
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
             label = "HML";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
             tapping-term-ms = <200>;
         };
+
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
             label = "HMR";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
         };
+
         hold_tap_layer: hold_tap_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_LAYER";
-            bindings =
-                <&mo>,
-                <&kp>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -180,10 +175,10 @@
         raise_layer {
             label = "Raise";
             bindings = <
-&none  &none  &none     &kp UP_ARROW    &none      &none     &none   &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mwh SCROLL_UP    &none
-&none  &none  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &none     &none   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mwh SCROLL_DOWN  &none
-&none  &none  &none     &none           &none      &none     &none   &none           &none           &none            &none             &none
-                        &none           &none      &trans    &trans  &none           &none
+&none  &none  &mkp RCLK  &kp UP_ARROW    &mkp LCLK  &none     &none   &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mwh SCROLL_UP    &none
+&none  &none  &kp LEFT   &kp DOWN_ARROW  &kp RIGHT  &none     &none   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mwh SCROLL_DOWN  &none
+&none  &none  &none      &none           &none      &none     &none   &none           &none           &none            &none             &none
+                         &none           &none      &trans    &trans  &none           &none
             >;
         };
 
